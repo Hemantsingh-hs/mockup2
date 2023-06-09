@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import Scorecard from './component/Scorecard'
+import Graph from './component/Graph';
+import Table from './component/Table';
+// import styles from './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="scorecards">
+        <Scorecard title="Scorecard 1" value="100" />
+        <Scorecard title="Scorecard 2" value="200" />
+      </div>
+      <div className="graph">
+        <Graph    />
+      </div>
+      <div className="table">
+        <Table />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
